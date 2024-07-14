@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/ilhamtrimulyawan/cypress-api-flip-test#readme",
   "devDependencies": {
-    "cypress": "^9.5.3",
-    "cypress-xpath": "^1.6.2"
+    "cypress": "^9.7.0",
+    "cypress-xpath": "^1.8.0"
   },
   "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "jsonpath": "^1.1.1",
     "mochawesome": "^7.1.3"
   }

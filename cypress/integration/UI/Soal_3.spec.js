@@ -4,13 +4,25 @@ describe('Adding product to checkout', () => {
 
      it('User choose product and add checkout', () => {
           //visit to shop-all
-          cy.visit('https://demo.vercel.store/search/shop-all');
+          cy.visit('https://demo.vercel.store/search?sort=price-desc');
+          cy.wait(3000)
+          // Add assertions to verify the items are sorted correctly
+          cy.get('.rounded-full.bg-blue-600').should('have.length.greaterThan', 0).then($prices => {
+               const prices = Cypress._.map($prices, price => parseFloat(price.innerText.replace('$', '')));
+               const sortedPrices = Cypress._.clone(prices).sort((a, b) => b - a);
 
-          cy.xpath("//*[contains(text(),'Price: High to low')]").click();
-          const pricehigh1 = cy.xpath('//*[contains(text(),"Lightweight Jacket")]/parent::h3/following-sibling::*').text();
-          const Stringpricehigh1 = pricehigh1.delete('$').gsub(',', '.').to_f;
-          const pricehigh2 = cy.xpath('//*[contains(text(),"T-Shirt")]/parent::h3/following-sibling::*').text();
-          const Stringpricehigh2 = pricehigh2.delete('$').gsub(',', '.').to_f;
+               // Log prices for debugging
+               cy.wrap(prices).then(prices => {
+                    cy.log('Prices:', prices);
+               });
 
-          expect(Stringpricehigh1.to_i > Stringpricehigh2.to_i).to.eq(true);
-});
+               cy.wrap(sortedPrices).then(sortedPrices => {
+                    cy.log('Sorted Prices:', sortedPrices);
+               });
+
+               for (let i = 0; i < prices.length; i++) {
+                    expect(prices[i]).to.equal(sortedPrices[i]);
+               }
+          });
+     });
+})
