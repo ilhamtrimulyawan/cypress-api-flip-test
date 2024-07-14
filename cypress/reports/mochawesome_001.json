@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-14T05:37:56.702Z",
+    "end": "2024-07-14T05:37:57.366Z",
+    "duration": 664,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e1f43954-66a0-49eb-bcc4-94461c6a33f7",
+      "title": "",
+      "fullFile": "cypress/integration/API/POSTtodos.spec.js",
+      "file": "cypress/integration/API/POSTtodos.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a136ee98-4e8e-42e0-b07b-02a153e4d053",
+          "title": "Testing api",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "f8c4fe91-64e5-4081-9b9c-a3f236de09bf",
+              "title": "GET /todos",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should get todos with status completed",
+                  "fullTitle": "Testing api GET /todos should get todos with status completed",
+                  "timedOut": null,
+                  "duration": 648,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const body = `[${randomNumber}]Edit comment for id  ${post_id}`;\ncy.request({\n  method: 'POST',\n  url: `${url}public/v2/posts/${post_id}/comments`,\n  headers: {\n    Authorization: `Bearer ${token}`\n  },\n  body: {\n    post_id: post_id,\n    name: 'Test User',\n    email: 'testuser@example.com',\n    body: body\n  }\n}).then(response => {\n  expect(response.status).to.eq(201);\n  cy.log(`Response Body: ${JSON.stringify(response.body)}`);\n  expect(response.body.id).to.not.be.null;\n  expect(response.body.body).to.eq(body);\n  expect(response.body.name).to.not.be.null;\n});",
+                  "err": {},
+                  "uuid": "8265ad0c-a5c7-41c1-b968-8cc403a0133c",
+                  "parentUUID": "f8c4fe91-64e5-4081-9b9c-a3f236de09bf",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8265ad0c-a5c7-41c1-b968-8cc403a0133c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 648,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
