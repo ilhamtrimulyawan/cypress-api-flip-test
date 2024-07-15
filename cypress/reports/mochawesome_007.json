@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-07-15T14:28:16.710Z",
-    "end": "2024-07-15T14:28:33.648Z",
-    "duration": 16938,
+    "start": "2024-07-15T14:30:55.399Z",
+    "end": "2024-07-15T14:31:12.227Z",
+    "duration": 16828,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "6cbcc659-881b-4be3-a9ce-c306eb3d8407",
+      "uuid": "86e4111d-53cf-4a51-821f-1215955d6538",
       "title": "",
       "fullFile": "cypress/integration/UI/Soal_1.spec.js",
       "file": "cypress/integration/UI/Soal_1.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "17da2d3b-6e3c-43ce-aeb1-a108906482ce",
+          "uuid": "8fa919a0-fd34-4ab7-8741-52ebd75f7d59",
           "title": "Adding product to checkout",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "User choose product and add checkout",
               "fullTitle": "Adding product to checkout User choose product and add checkout",
               "timedOut": null,
-              "duration": 14581,
+              "duration": 14382,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const nama_product = \"Acme Drawstring Bag\";\ncy.visit('https://demo.vercel.store');\ncy.wait(3000);\ncy.xpath(`//*[contains(@class,\"aspect-square\")]/descendant::h3[(text()=\"${nama_product}\")]`).should('exist').click();\ncy.swipeVertical('//h1', 100, 300, 200);\ncy.xpath('//button[(text()=\"Black\")]').should('exist').click().wait(3000);\ncy.xpath('//button[(text()=\"7 x 9 inch\")]').should('exist').click().wait(3000);\ncy.xpath('//button[(text()=\"Add To Cart\")]').should('exist').click().wait(3000);\ncy.xpath('//*[(@class=\"leading-tight\")][1]').invoke('text').then(text => {\n  cy.wrap(text).as('ProductName');\n}); //verifcation in CO page\ncy.get('@ProductName').then(expectedNameProduct => {\n  expect(expectedNameProduct).to.equal(nama_product);\n}); // cy.xpath('//*[(@id=\"headlessui-dialog-panel-:r1:\")]/descendant::a[(text()=\"Proceed to Checkout\")]')\n//      .should('be.visible')\n//      .click()\n//      .wait(10000);\n// Fill in guest checkout details\n// cy.get('#email')\n//      .should(\"exist\")\n//      .type('guest@example.com');\n// cy.get('[name=\"firstName\"]')\n//      .should(\"exist\")\n//      .type('Test');\n// cy.get('[name=\"lastName\"]')\n//      .should(\"exist\")\n//      .type('Ilham Flip');\n// cy.get('#shipping-address1')\n//      .type('132 My Street, Kingston NY 12401');\n// cy.get('#shipping-address1-option-0')\n//      .should('be.visible')\n//      .click();\n//get information address\n//email\n//      cy.get('[name=\"email\"]')\n//           .should('be.visible')\n//           .invoke('text')\n//           .then((text) => { cy.wrap(text).as('Email');\n//      });\n//      //address\n//      cy.get('shipping-address1')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('Address');\n//      });\n//      //City\n//      cy.xpath('//*[(text()=\"City\")]/ancestor::label/following-sibling::div/input')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('City');\n//      });\n//      //State\n//      cy.get('//*[(text()=\"State\")]/ancestor::label/following-sibling::div/input')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('State');\n//      });\n//      //Zipcode\n//      cy.get('//*[(text()=\"ZIP code\")]/ancestor::label/following-sibling::div/input')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('ZIP code');\n//      });\n//    cy.xpath('//*[(text()=\"Continue to shipping\")]')\n//           .should('exist')\n//           .click()\n//           .wait(3000)\n//      //verification\n//      cy.xpath('//*[(text()=\"Contact\")]/parent::*/following-sibling::*/bdo')\n//        .should('be.visible')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('contactCheckout');\n//      });\n//      cy.xpath('//picture/ancestor::div[4]/child::div[2]/*/p')\n//        .should('be.visible')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('nameProductCheckout');\n//      });\n//      cy.get('@Email').then((expectedContact) => {\n//           cy.get('@contactCheckout').then((actualContactCheckout)=>{\n//                expect(expectedContact).to.equal(actualContactCheckout);\n//           }); \n//      });\n//      cy.get('@ProductName').then((expectedNameProduct) => {\n//           cy.get('@nameProductCheckout').then((actualNameProductCheckout)=>{\n//                expect(expectedNameProduct).to.equal(actualNameProductCheckout);\n//           }); \n//      });",
               "err": {},
-              "uuid": "9f380fff-2492-460c-9168-171ab3bb6dc7",
-              "parentUUID": "17da2d3b-6e3c-43ce-aeb1-a108906482ce",
+              "uuid": "aecfe584-93da-4c67-93c2-829a7705b5bc",
+              "parentUUID": "8fa919a0-fd34-4ab7-8741-52ebd75f7d59",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9f380fff-2492-460c-9168-171ab3bb6dc7"
+            "aecfe584-93da-4c67-93c2-829a7705b5bc"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14581,
+          "duration": 14382,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

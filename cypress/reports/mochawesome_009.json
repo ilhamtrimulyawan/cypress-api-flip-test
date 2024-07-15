@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-07-15T14:28:56.723Z",
-    "end": "2024-07-15T14:29:03.598Z",
-    "duration": 6875,
+    "start": "2024-07-15T14:31:35.528Z",
+    "end": "2024-07-15T14:31:42.298Z",
+    "duration": 6770,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1d57884d-90c4-49c1-ba20-5296ffb39fd8",
+      "uuid": "fd99caa1-d91a-475a-abb7-b48b17f86ed8",
       "title": "",
       "fullFile": "cypress/integration/UI/Soal_3.spec.js",
       "file": "cypress/integration/UI/Soal_3.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "50859719-a155-4a49-9636-6c8d03e981e2",
+          "uuid": "a17cfb01-202c-4fc2-a33a-c0cea4c83b94",
           "title": "Adding product to checkout",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "User choose product and add checkout",
               "fullTitle": "Adding product to checkout User choose product and add checkout",
               "timedOut": null,
-              "duration": 4834,
+              "duration": 4528,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: expected 45 to equal 50\n    at Context.eval (https://demo.vercel.store/__cypress/tests?p=cypress\\integration\\UI\\Soal_3.spec.js:120:30)",
                 "diff": "- 45\n+ 50\n"
               },
-              "uuid": "ccecde66-0ebb-4ab1-8bab-0e714c3bb575",
-              "parentUUID": "50859719-a155-4a49-9636-6c8d03e981e2",
+              "uuid": "8cf7ab71-5f29-4d5b-a0eb-54c38364080c",
+              "parentUUID": "a17cfb01-202c-4fc2-a33a-c0cea4c83b94",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "ccecde66-0ebb-4ab1-8bab-0e714c3bb575"
+            "8cf7ab71-5f29-4d5b-a0eb-54c38364080c"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 4834,
+          "duration": 4528,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

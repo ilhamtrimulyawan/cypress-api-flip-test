@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-07-14T05:37:52.874Z",
-    "end": "2024-07-14T05:37:54.458Z",
-    "duration": 1584,
+    "start": "2024-07-15T14:28:07.534Z",
+    "end": "2024-07-15T14:28:10.738Z",
+    "duration": 3204,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "58f749a3-91e3-465f-a12f-5315db757231",
+      "uuid": "e0c547a1-e603-4e6b-ae26-8c42d7dc8404",
       "title": "",
       "fullFile": "cypress/integration/API/GETtodos.spec.js",
       "file": "cypress/integration/API/GETtodos.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ff8befc4-0083-4e17-89c6-5128c398f818",
+          "uuid": "d435e1d8-78d9-4d2a-85c6-08c29889e700",
           "title": "Testing api",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "0f8310c7-9631-400a-85d5-8172e5ad590a",
+              "uuid": "c7fdb50d-a35a-4dc6-b497-c4414cfbaa3d",
               "title": "GET /todos",
               "fullFile": "",
               "file": "",
@@ -44,32 +44,32 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "Get todos with title containing \"credo\" and status \"completed\"",
-                  "fullTitle": "Testing api GET /todos Get todos with title containing \"credo\" and status \"completed\"",
+                  "title": "Get todos with title containing \"Calamitas\" and status \"completed\"",
+                  "fullTitle": "Testing api GET /todos Get todos with title containing \"Calamitas\" and status \"completed\"",
                   "timedOut": null,
-                  "duration": 1563,
+                  "duration": 3172,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.request({\n  method: 'GET',\n  url: 'https://gorest.co.in/public/v1/todos',\n  headers: {\n    Authorization: `Bearer ${token}`\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  cy.log(`Response Body: ${JSON.stringify(response.body.data)}`);\n  const bodyData = response.body.data;\n  const filteredTodos = bodyData.filter(todo => todo.title.includes('astrum') && todo.status === 'completed');\n  filteredTodos.forEach(todo => {\n    expect(todo.title).to.include('astrum');\n    expect(todo.status).to.eq('completed');\n    expect(todo.due_on).to.not.be.null;\n    expect(todo.user_id).to.not.be.null;\n  });\n});",
+                  "code": "cy.request({\n  method: 'GET',\n  url: 'https://gorest.co.in/public/v1/todos',\n  headers: {\n    Authorization: `Bearer ${token}`\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  cy.log(`Response Body: ${JSON.stringify(response.body.data)}`);\n  const bodyData = response.body.data;\n  const filteredTodos = bodyData.filter(todo => todo.title.includes('Calamitas') && todo.status === 'completed');\n  filteredTodos.forEach(todo => {\n    expect(todo.title).to.include('Calamitas');\n    expect(todo.status).to.eq('completed');\n    expect(todo.due_on).to.not.be.null;\n    expect(todo.user_id).to.not.be.null;\n  }); // expect(filteredTodos).to.not.be.empty;\n  // const allTitlesIncludeCredo = filteredTodos.every(todo => todo.title.includes('credos'));\n  // const allStatusesAreCompleted = filteredTodos.every(todo => todo.status === 'completed');\n  // expect(allTitlesIncludeCredo).to.be.true;\n  // expect(allStatusesAreCompleted).to.be.true;\n});",
                   "err": {},
-                  "uuid": "e3452de2-68a4-470a-bd85-e2885264ec2a",
-                  "parentUUID": "0f8310c7-9631-400a-85d5-8172e5ad590a",
+                  "uuid": "b4dbd06e-8804-4b63-a5e2-3bdd99a03418",
+                  "parentUUID": "c7fdb50d-a35a-4dc6-b497-c4414cfbaa3d",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "e3452de2-68a4-470a-bd85-e2885264ec2a"
+                "b4dbd06e-8804-4b63-a5e2-3bdd99a03418"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1563,
+              "duration": 3172,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

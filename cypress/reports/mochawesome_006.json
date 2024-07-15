@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-07-15T14:28:13.303Z",
-    "end": "2024-07-15T14:28:14.050Z",
-    "duration": 747,
+    "start": "2024-07-15T14:30:51.989Z",
+    "end": "2024-07-15T14:30:52.723Z",
+    "duration": 734,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "530bf3df-2c9d-4531-82e5-6727dac18509",
+      "uuid": "c3e52508-b4a1-448a-bcdb-e3db348d1e1a",
       "title": "",
       "fullFile": "cypress/integration/API/POSTtodos.spec.js",
       "file": "cypress/integration/API/POSTtodos.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "05904d10-df21-4e62-821d-183bb1fd17de",
+          "uuid": "900d8071-f962-4798-b3b2-02991a5c86b8",
           "title": "Testing api",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "9b4bfb03-d26f-49fb-b7b7-c603afe74f3f",
+              "uuid": "1edd9189-28b6-4be8-8848-843e9def3c34",
               "title": "GET /todos",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "should get todos with status completed",
                   "fullTitle": "Testing api GET /todos should get todos with status completed",
                   "timedOut": null,
-                  "duration": 726,
+                  "duration": 713,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,20 +56,20 @@
                   "context": null,
                   "code": "const body = `[${randomNumber}]Edit comment for id  ${post_id}`;\ncy.request({\n  method: 'POST',\n  url: `${url}public/v2/posts/${post_id}/comments`,\n  headers: {\n    Authorization: `Bearer ${token}`\n  },\n  body: {\n    post_id: post_id,\n    name: 'Test User',\n    email: 'testuser@example.com',\n    body: body\n  }\n}).then(response => {\n  expect(response.status).to.eq(201);\n  cy.log(`Response Body: ${JSON.stringify(response.body)}`);\n  expect(response.body.id).to.not.be.null;\n  expect(response.body.body).to.eq(body);\n  expect(response.body.name).to.not.be.null;\n});",
                   "err": {},
-                  "uuid": "9f441a6d-5503-4396-8cbb-9a9fcb5c2a52",
-                  "parentUUID": "9b4bfb03-d26f-49fb-b7b7-c603afe74f3f",
+                  "uuid": "da43df4b-5f1c-451c-9ef5-04f0282d3427",
+                  "parentUUID": "1edd9189-28b6-4be8-8848-843e9def3c34",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "9f441a6d-5503-4396-8cbb-9a9fcb5c2a52"
+                "da43df4b-5f1c-451c-9ef5-04f0282d3427"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 726,
+              "duration": 713,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
