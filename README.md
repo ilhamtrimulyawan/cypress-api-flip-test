@@ -1,8 +1,6 @@
 # cypress-api-flip-test
-Structure
-<img width="571" alt="image" src="https://user-images.githubusercontent.com/103343341/162727194-c1ad9691-8f75-4665-a378-35677db07c68.png">
 
-Video Demo : 
+Video Demo : https://drive.google.com/file/d/1K9Dc-95QTVEMmnrDqf692SSCN88RPYR4/view?usp=drive_link
 
 Creating a Cypress project
 npm init -y
