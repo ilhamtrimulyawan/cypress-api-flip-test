@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2024-07-14T05:37:52.874Z",
-    "end": "2024-07-14T05:38:47.130Z",
-    "duration": 54256
+    "start": "2024-07-15T14:28:07.534Z",
+    "end": "2024-07-15T14:29:03.598Z",
+    "duration": 56064
   },
   "results": [
     {
-      "uuid": "e1f43954-66a0-49eb-bcc4-94461c6a33f7",
+      "uuid": "530bf3df-2c9d-4531-82e5-6727dac18509",
       "title": "",
       "fullFile": "cypress/integration/API/POSTtodos.spec.js",
       "file": "cypress/integration/API/POSTtodos.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a136ee98-4e8e-42e0-b07b-02a153e4d053",
+          "uuid": "05904d10-df21-4e62-821d-183bb1fd17de",
           "title": "Testing api",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "f8c4fe91-64e5-4081-9b9c-a3f236de09bf",
+              "uuid": "9b4bfb03-d26f-49fb-b7b7-c603afe74f3f",
               "title": "GET /todos",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "should get todos with status completed",
                   "fullTitle": "Testing api GET /todos should get todos with status completed",
                   "timedOut": null,
-                  "duration": 648,
+                  "duration": 726,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,20 +56,20 @@
                   "context": null,
                   "code": "const body = `[${randomNumber}]Edit comment for id  ${post_id}`;\ncy.request({\n  method: 'POST',\n  url: `${url}public/v2/posts/${post_id}/comments`,\n  headers: {\n    Authorization: `Bearer ${token}`\n  },\n  body: {\n    post_id: post_id,\n    name: 'Test User',\n    email: 'testuser@example.com',\n    body: body\n  }\n}).then(response => {\n  expect(response.status).to.eq(201);\n  cy.log(`Response Body: ${JSON.stringify(response.body)}`);\n  expect(response.body.id).to.not.be.null;\n  expect(response.body.body).to.eq(body);\n  expect(response.body.name).to.not.be.null;\n});",
                   "err": {},
-                  "uuid": "8265ad0c-a5c7-41c1-b968-8cc403a0133c",
-                  "parentUUID": "f8c4fe91-64e5-4081-9b9c-a3f236de09bf",
+                  "uuid": "9f441a6d-5503-4396-8cbb-9a9fcb5c2a52",
+                  "parentUUID": "9b4bfb03-d26f-49fb-b7b7-c603afe74f3f",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "8265ad0c-a5c7-41c1-b968-8cc403a0133c"
+                "9f441a6d-5503-4396-8cbb-9a9fcb5c2a52"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 648,
+              "duration": 726,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -95,7 +95,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "91318853-138f-4dab-89ca-9b73001e657b",
+      "uuid": "6cbcc659-881b-4be3-a9ce-c306eb3d8407",
       "title": "",
       "fullFile": "cypress/integration/UI/Soal_1.spec.js",
       "file": "cypress/integration/UI/Soal_1.spec.js",
@@ -104,7 +104,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "99f723ac-e8fd-4990-aba3-bf6c27ec9223",
+          "uuid": "17da2d3b-6e3c-43ce-aeb1-a108906482ce",
           "title": "Adding product to checkout",
           "fullFile": "",
           "file": "",
@@ -115,7 +115,7 @@
               "title": "User choose product and add checkout",
               "fullTitle": "Adding product to checkout User choose product and add checkout",
               "timedOut": null,
-              "duration": 16318,
+              "duration": 14581,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -124,20 +124,20 @@
               "context": null,
               "code": "const nama_product = \"Acme Drawstring Bag\";\ncy.visit('https://demo.vercel.store');\ncy.wait(3000);\ncy.xpath(`//*[contains(@class,\"aspect-square\")]/descendant::h3[(text()=\"${nama_product}\")]`).should('exist').click();\ncy.swipeVertical('//h1', 100, 300, 200);\ncy.xpath('//button[(text()=\"Black\")]').should('exist').click().wait(3000);\ncy.xpath('//button[(text()=\"7 x 9 inch\")]').should('exist').click().wait(3000);\ncy.xpath('//button[(text()=\"Add To Cart\")]').should('exist').click().wait(3000);\ncy.xpath('//*[(@class=\"leading-tight\")][1]').invoke('text').then(text => {\n  cy.wrap(text).as('ProductName');\n}); //verifcation in CO page\ncy.get('@ProductName').then(expectedNameProduct => {\n  expect(expectedNameProduct).to.equal(nama_product);\n}); // cy.xpath('//*[(@id=\"headlessui-dialog-panel-:r1:\")]/descendant::a[(text()=\"Proceed to Checkout\")]')\n//      .should('be.visible')\n//      .click()\n//      .wait(10000);\n// Fill in guest checkout details\n// cy.get('#email')\n//      .should(\"exist\")\n//      .type('guest@example.com');\n// cy.get('[name=\"firstName\"]')\n//      .should(\"exist\")\n//      .type('Test');\n// cy.get('[name=\"lastName\"]')\n//      .should(\"exist\")\n//      .type('Ilham Flip');\n// cy.get('#shipping-address1')\n//      .type('132 My Street, Kingston NY 12401');\n// cy.get('#shipping-address1-option-0')\n//      .should('be.visible')\n//      .click();\n//get information address\n//email\n//      cy.get('[name=\"email\"]')\n//           .should('be.visible')\n//           .invoke('text')\n//           .then((text) => { cy.wrap(text).as('Email');\n//      });\n//      //address\n//      cy.get('shipping-address1')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('Address');\n//      });\n//      //City\n//      cy.xpath('//*[(text()=\"City\")]/ancestor::label/following-sibling::div/input')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('City');\n//      });\n//      //State\n//      cy.get('//*[(text()=\"State\")]/ancestor::label/following-sibling::div/input')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('State');\n//      });\n//      //Zipcode\n//      cy.get('//*[(text()=\"ZIP code\")]/ancestor::label/following-sibling::div/input')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('ZIP code');\n//      });\n//    cy.xpath('//*[(text()=\"Continue to shipping\")]')\n//           .should('exist')\n//           .click()\n//           .wait(3000)\n//      //verification\n//      cy.xpath('//*[(text()=\"Contact\")]/parent::*/following-sibling::*/bdo')\n//        .should('be.visible')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('contactCheckout');\n//      });\n//      cy.xpath('//picture/ancestor::div[4]/child::div[2]/*/p')\n//        .should('be.visible')\n//        .invoke('text')\n//        .then((text) => { cy.wrap(text).as('nameProductCheckout');\n//      });\n//      cy.get('@Email').then((expectedContact) => {\n//           cy.get('@contactCheckout').then((actualContactCheckout)=>{\n//                expect(expectedContact).to.equal(actualContactCheckout);\n//           }); \n//      });\n//      cy.get('@ProductName').then((expectedNameProduct) => {\n//           cy.get('@nameProductCheckout').then((actualNameProductCheckout)=>{\n//                expect(expectedNameProduct).to.equal(actualNameProductCheckout);\n//           }); \n//      });",
               "err": {},
-              "uuid": "48a4e83f-d014-415e-82bd-8290f2bafbd1",
-              "parentUUID": "99f723ac-e8fd-4990-aba3-bf6c27ec9223",
+              "uuid": "9f380fff-2492-460c-9168-171ab3bb6dc7",
+              "parentUUID": "17da2d3b-6e3c-43ce-aeb1-a108906482ce",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "48a4e83f-d014-415e-82bd-8290f2bafbd1"
+            "9f380fff-2492-460c-9168-171ab3bb6dc7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 16318,
+          "duration": 14581,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -153,7 +153,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "dce04b22-3d7f-4826-b339-9c2d93328793",
+      "uuid": "0826dc3b-f0f4-4693-9db3-e62c20ac5431",
       "title": "",
       "fullFile": "cypress/integration/UI/Soal_2.spec.js",
       "file": "cypress/integration/UI/Soal_2.spec.js",
@@ -162,7 +162,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "675c13bc-8b60-4641-a79b-da6fa8e33a8d",
+          "uuid": "2dcfe1c9-fe62-43d8-964e-546baec7d4b2",
           "title": "Adding product to checkout",
           "fullFile": "",
           "file": "",
@@ -173,7 +173,7 @@
               "title": "User search product",
               "fullTitle": "Adding product to checkout User search product",
               "timedOut": null,
-              "duration": 14458,
+              "duration": 14606,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -182,20 +182,20 @@
               "context": null,
               "code": "const search_product = \"T-Shirt\";\ncy.visit('https://demo.vercel.store');\ncy.wait(3000);\ncy.get('[name=\"search\"').should('exist').type(`${search_product}{enter}`).wait(3000);\ncy.xpath(`//*[contains(text(),\"${search_product}\")]`).should('be.visible').first().click();\ncy.swipeVertical('//h1', 100, 300, 200);\ncy.xpath('//*[(text()=\"Size\")]/following-sibling::dd/button[(text()=\"XS\")]').should('exist').click().wait(3000);\ncy.xpath('//button[(text()=\"Add To Cart\")]').should('exist').click().wait(3000);\ncy.xpath('//h1').invoke('text').then(text => {\n  cy.wrap(text).as('ProductName');\n}); //verifcation in CO page\ncy.xpath('//*[(@class=\"leading-tight\")][1]').invoke('text').then(text => {\n  cy.wrap(text).as('ProductNameCO');\n});\ncy.get('@ProductName').then(expectedNameProduct => {\n  cy.get('@ProductNameCO').then(actualNameProductCO => {\n    expect(expectedNameProduct).to.equal(actualNameProductCO);\n  });\n});",
               "err": {},
-              "uuid": "e9662923-d71e-4aa2-ad08-a3b7e07f7a1d",
-              "parentUUID": "675c13bc-8b60-4641-a79b-da6fa8e33a8d",
+              "uuid": "2727b296-89ce-45d8-9a4e-4d9bbca2ae7b",
+              "parentUUID": "2dcfe1c9-fe62-43d8-964e-546baec7d4b2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e9662923-d71e-4aa2-ad08-a3b7e07f7a1d"
+            "2727b296-89ce-45d8-9a4e-4d9bbca2ae7b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14458,
+          "duration": 14606,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -211,7 +211,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "9c776055-8680-4393-8258-09c26a4c1fce",
+      "uuid": "1d57884d-90c4-49c1-ba20-5296ffb39fd8",
       "title": "",
       "fullFile": "cypress/integration/UI/Soal_3.spec.js",
       "file": "cypress/integration/UI/Soal_3.spec.js",
@@ -220,7 +220,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "947f8f84-c949-48fd-80a0-007cf1c24e63",
+          "uuid": "50859719-a155-4a49-9636-6c8d03e981e2",
           "title": "Adding product to checkout",
           "fullFile": "",
           "file": "",
@@ -231,7 +231,7 @@
               "title": "User choose product and add checkout",
               "fullTitle": "Adding product to checkout User choose product and add checkout",
               "timedOut": null,
-              "duration": 4316,
+              "duration": 4834,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -244,8 +244,8 @@
                 "estack": "AssertionError: expected 45 to equal 50\n    at Context.eval (https://demo.vercel.store/__cypress/tests?p=cypress\\integration\\UI\\Soal_3.spec.js:120:30)",
                 "diff": "- 45\n+ 50\n"
               },
-              "uuid": "e012dc40-3d64-4be1-b579-fa395d52aeb9",
-              "parentUUID": "947f8f84-c949-48fd-80a0-007cf1c24e63",
+              "uuid": "ccecde66-0ebb-4ab1-8bab-0e714c3bb575",
+              "parentUUID": "50859719-a155-4a49-9636-6c8d03e981e2",
               "isHook": false,
               "skipped": false
             }
@@ -253,11 +253,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "e012dc40-3d64-4be1-b579-fa395d52aeb9"
+            "ccecde66-0ebb-4ab1-8bab-0e714c3bb575"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 4316,
+          "duration": 4834,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -273,7 +273,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "58f749a3-91e3-465f-a12f-5315db757231",
+      "uuid": "e0c547a1-e603-4e6b-ae26-8c42d7dc8404",
       "title": "",
       "fullFile": "cypress/integration/API/GETtodos.spec.js",
       "file": "cypress/integration/API/GETtodos.spec.js",
@@ -282,7 +282,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ff8befc4-0083-4e17-89c6-5128c398f818",
+          "uuid": "d435e1d8-78d9-4d2a-85c6-08c29889e700",
           "title": "Testing api",
           "fullFile": "",
           "file": "",
@@ -291,7 +291,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "0f8310c7-9631-400a-85d5-8172e5ad590a",
+              "uuid": "c7fdb50d-a35a-4dc6-b497-c4414cfbaa3d",
               "title": "GET /todos",
               "fullFile": "",
               "file": "",
@@ -299,32 +299,32 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "Get todos with title containing \"credo\" and status \"completed\"",
-                  "fullTitle": "Testing api GET /todos Get todos with title containing \"credo\" and status \"completed\"",
+                  "title": "Get todos with title containing \"Calamitas\" and status \"completed\"",
+                  "fullTitle": "Testing api GET /todos Get todos with title containing \"Calamitas\" and status \"completed\"",
                   "timedOut": null,
-                  "duration": 1563,
+                  "duration": 3172,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.request({\n  method: 'GET',\n  url: 'https://gorest.co.in/public/v1/todos',\n  headers: {\n    Authorization: `Bearer ${token}`\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  cy.log(`Response Body: ${JSON.stringify(response.body.data)}`);\n  const bodyData = response.body.data;\n  const filteredTodos = bodyData.filter(todo => todo.title.includes('astrum') && todo.status === 'completed');\n  filteredTodos.forEach(todo => {\n    expect(todo.title).to.include('astrum');\n    expect(todo.status).to.eq('completed');\n    expect(todo.due_on).to.not.be.null;\n    expect(todo.user_id).to.not.be.null;\n  });\n});",
+                  "code": "cy.request({\n  method: 'GET',\n  url: 'https://gorest.co.in/public/v1/todos',\n  headers: {\n    Authorization: `Bearer ${token}`\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  cy.log(`Response Body: ${JSON.stringify(response.body.data)}`);\n  const bodyData = response.body.data;\n  const filteredTodos = bodyData.filter(todo => todo.title.includes('Calamitas') && todo.status === 'completed');\n  filteredTodos.forEach(todo => {\n    expect(todo.title).to.include('Calamitas');\n    expect(todo.status).to.eq('completed');\n    expect(todo.due_on).to.not.be.null;\n    expect(todo.user_id).to.not.be.null;\n  }); // expect(filteredTodos).to.not.be.empty;\n  // const allTitlesIncludeCredo = filteredTodos.every(todo => todo.title.includes('credos'));\n  // const allStatusesAreCompleted = filteredTodos.every(todo => todo.status === 'completed');\n  // expect(allTitlesIncludeCredo).to.be.true;\n  // expect(allStatusesAreCompleted).to.be.true;\n});",
                   "err": {},
-                  "uuid": "e3452de2-68a4-470a-bd85-e2885264ec2a",
-                  "parentUUID": "0f8310c7-9631-400a-85d5-8172e5ad590a",
+                  "uuid": "b4dbd06e-8804-4b63-a5e2-3bdd99a03418",
+                  "parentUUID": "c7fdb50d-a35a-4dc6-b497-c4414cfbaa3d",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "e3452de2-68a4-470a-bd85-e2885264ec2a"
+                "b4dbd06e-8804-4b63-a5e2-3bdd99a03418"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1563,
+              "duration": 3172,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

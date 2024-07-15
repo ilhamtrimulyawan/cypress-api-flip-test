@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-07-15T14:28:37.224Z",
-    "end": "2024-07-15T14:28:53.172Z",
-    "duration": 15948,
+    "start": "2024-07-15T14:31:15.925Z",
+    "end": "2024-07-15T14:31:31.909Z",
+    "duration": 15984,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0826dc3b-f0f4-4693-9db3-e62c20ac5431",
+      "uuid": "cb43704d-01c4-4528-b255-e947f87ee04b",
       "title": "",
       "fullFile": "cypress/integration/UI/Soal_2.spec.js",
       "file": "cypress/integration/UI/Soal_2.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2dcfe1c9-fe62-43d8-964e-546baec7d4b2",
+          "uuid": "551120f4-4b32-4f95-82a1-d2f52d3654c5",
           "title": "Adding product to checkout",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "User search product",
               "fullTitle": "Adding product to checkout User search product",
               "timedOut": null,
-              "duration": 14606,
+              "duration": 14578,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const search_product = \"T-Shirt\";\ncy.visit('https://demo.vercel.store');\ncy.wait(3000);\ncy.get('[name=\"search\"').should('exist').type(`${search_product}{enter}`).wait(3000);\ncy.xpath(`//*[contains(text(),\"${search_product}\")]`).should('be.visible').first().click();\ncy.swipeVertical('//h1', 100, 300, 200);\ncy.xpath('//*[(text()=\"Size\")]/following-sibling::dd/button[(text()=\"XS\")]').should('exist').click().wait(3000);\ncy.xpath('//button[(text()=\"Add To Cart\")]').should('exist').click().wait(3000);\ncy.xpath('//h1').invoke('text').then(text => {\n  cy.wrap(text).as('ProductName');\n}); //verifcation in CO page\ncy.xpath('//*[(@class=\"leading-tight\")][1]').invoke('text').then(text => {\n  cy.wrap(text).as('ProductNameCO');\n});\ncy.get('@ProductName').then(expectedNameProduct => {\n  cy.get('@ProductNameCO').then(actualNameProductCO => {\n    expect(expectedNameProduct).to.equal(actualNameProductCO);\n  });\n});",
               "err": {},
-              "uuid": "2727b296-89ce-45d8-9a4e-4d9bbca2ae7b",
-              "parentUUID": "2dcfe1c9-fe62-43d8-964e-546baec7d4b2",
+              "uuid": "bfb1c28d-f790-4a93-a0ed-bf0de465831a",
+              "parentUUID": "551120f4-4b32-4f95-82a1-d2f52d3654c5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2727b296-89ce-45d8-9a4e-4d9bbca2ae7b"
+            "bfb1c28d-f790-4a93-a0ed-bf0de465831a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14606,
+          "duration": 14578,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
